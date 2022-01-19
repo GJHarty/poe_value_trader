@@ -27,6 +27,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "jest": "^27.4.7",
     "nodemon": "^2.0.4"
   },
   "browserslist": [
