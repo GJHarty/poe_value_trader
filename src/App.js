@@ -5,10 +5,11 @@ function App() {
 
   const runTest = () => {
     console.log("in run test");
-    
+
     axios.get('/test')
       .then(res => {
         console.log("success");
+        console.log(res);
       })
       .catch(err => {
         console.log("failure", err);
