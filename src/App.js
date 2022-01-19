@@ -6,7 +6,7 @@ function App() {
 
   const testGet = () => {
     console.log("in testGet");
-    axios.get('/')
+    axios.get('/api/test')
       .then(res => {
         console.log("client succesfully received GET response");
       })

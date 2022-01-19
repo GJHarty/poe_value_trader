@@ -8,7 +8,7 @@ const app = express();
 const templateRouter = require('./routes/templateRouter');
 
 // Routes
-app.use('/', templateRouter);
+app.use('/api/test', templateRouter);
 
 // Body parser middleware
 app.use(bodyParser.json());
