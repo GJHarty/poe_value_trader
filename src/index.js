@@ -1,3 +1,4 @@
+require('dotenv').config({path: __dirname + '/.env'});
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
