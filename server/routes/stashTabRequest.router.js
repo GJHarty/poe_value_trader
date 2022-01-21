@@ -14,12 +14,15 @@ router.get('/', (req, res) => {
   axios.get('https://api.pathofexile.com/public-stash-tabs', {
     headers: {
       'Authorization': `Bearer ${process.env.REACT_APP_POE_ACCESS_TOKEN}`,
-      'User-Agent': 'Mozilla/5.0'
+      'User-Agent': `OAuth tronial/1.0.0 (contact: harty.garrett@gmail.com) StrictMode`
     }
   })
     .then(apiRes => {
-      console.log("Received API response", apiRes.data);
-      res.send(apiRes.data);
+      const response = apiRes.data.stashes.filter(obj => {
+        return obj.public === true;
+      });
+      console.log("Received API response", response.splice(0-10));
+      res.send(response.splice(0-10));
     })
     .catch(err => {
       console.log("Error getting stash tabs", err);

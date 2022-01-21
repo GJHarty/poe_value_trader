@@ -30,7 +30,7 @@ function App() {
       <header className="App-header">
         <h1>POE Value Trader</h1>
         <button onClick={runTest}>Click to test</button>
-        <button onClick={queryApi}>Click to test</button>
+        <button onClick={queryApi}>Click to Query stash tabs</button>
       </header>
     </div>
   );
